@@ -11,7 +11,11 @@ class HomeBlocPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Interseguro'),
+        title: const Text('Interseguro',
+            style: TextStyle(
+              fontSize: 20,
+              fontFamily: 'NunitoSansExtrabold',
+            )),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -35,15 +39,19 @@ class HomeBlocPage extends StatelessWidget {
         child: BlocSelector<HomeBloc, HomeState, UserCredentials>(
           selector: (state) => state.user,
           builder: (context, user) {
+            const textStyle = TextStyle(
+              fontSize: 16,
+              fontFamily: 'NunitoSansBold',
+            );
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Spacer(flex: 6),
-                const Text('Empleado Logueado:'),
-                Text(user.name),
+                const Text('Empleado Logueado:', style: textStyle),
+                Text(user.name, style: textStyle),
                 const Spacer(),
-                const Text('¿Mantener sesión iniciada?'),
-                Text(user.isSaveSession.toString()),
+                const Text('¿Mantener sesión iniciada?', style: textStyle),
+                Text(user.isSaveSession.toString(), style: textStyle),
                 const Spacer(flex: 6),
               ],
             );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inter_login/presentation/auth/widgets/button_sign_in.dart';
+import 'package:inter_login/presentation/auth/widgets/button_social.dart';
 import 'package:inter_login/presentation/auth/widgets/checkbox_remember_me.dart';
 import 'package:inter_login/presentation/auth/widgets/inputs.dart';
 import 'package:inter_login/presentation/auth/widgets/social_widgets.dart';
@@ -12,7 +13,7 @@ class LoginForm extends StatelessWidget {
     final height = MediaQuery.of(context).size.longestSide;
     return Column(
       children: [
-        const Spacer(flex: 3),
+        const Spacer(flex: 10),
         Container(
           height: height * 0.4,
           padding: const EdgeInsets.all(18.0),
@@ -32,12 +33,18 @@ class LoginForm extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: const [
-              Text('Login', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22), textAlign: TextAlign.start),
-              Spacer(),
-              Text('Username', style: TextStyle()),
+              Text('Login',
+                  style: TextStyle(
+                    fontFamily: 'NunitoSansExtrabold',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24,
+                  ),
+                  textAlign: TextAlign.start),
+              Spacer(flex: 2),
+              Text('Username', style: TextStyle(fontFamily: 'NunitoSansBold')),
               UsernameInputField(),
               Spacer(flex: 2),
-              Text('Password', style: TextStyle()),
+              Text('Password', style: TextStyle(fontFamily: 'NunitoSansBold')),
               PasswordInputField(),
               Spacer(),
               _ForgotButton(),
@@ -55,6 +62,18 @@ class LoginForm extends StatelessWidget {
         const Spacer(),
         const SocialLoginWidget(),
         const Spacer(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: SocialNetwork.availables
+              .map((social) => ButtonSocial(
+                    colorLeft: social.colorLeft,
+                    colorRight: social.colorRight,
+                    iconData: social.iconData,
+                    urlRedirect: social.urlRedirect,
+                  ))
+              .toList(),
+        ),
+        const Spacer(flex: 2),
       ],
     );
   }
@@ -72,6 +91,7 @@ class _ForgotButton extends StatelessWidget {
         child: const Text('Forgot Password?',
             style: TextStyle(
               fontWeight: FontWeight.w500,
+              fontFamily: 'NunitoSansBold',
               color: Color(0xFF00c6fb),
             )),
       ),

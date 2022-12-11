@@ -41,7 +41,11 @@ class LoginView extends StatelessWidget {
                         Image.asset(R.ASSETS_LOGO_PNG),
                         const Text(
                           'Interseguro',
-                          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            fontFamily: 'NunitoSansExtrabold',
+                          ),
                         )
                       ],
                     ),

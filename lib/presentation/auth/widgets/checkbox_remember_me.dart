@@ -22,7 +22,10 @@ class CheckBoxRememberMe extends StatelessWidget {
                   context.read<AuthBloc>().add(const AuthEvent.rememberMeChanged());
                 },
               ),
-              const Text('Remember me')
+              const Text(
+                'Remember me',
+                style: TextStyle(fontFamily: 'NunitoSansSemibold', fontSize: 14),
+              )
             ],
           ),
         );

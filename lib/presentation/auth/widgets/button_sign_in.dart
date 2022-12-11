@@ -39,11 +39,11 @@ class ButtonSignIn extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent,
                 shape: RoundedRectangleBorder(borderRadius: borderRadius),
-                padding: const EdgeInsets.fromLTRB(42, 22, 42, 22),
+                padding: const EdgeInsets.fromLTRB(45, 20, 45, 20),
               ),
               child: const Text(
                 'SIGNIN',
-                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                style: TextStyle(fontFamily: 'NunitoSansExtrabold', fontWeight: FontWeight.w600, fontSize: 20),
               )),
         );
       },

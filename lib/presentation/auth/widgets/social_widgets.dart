@@ -17,7 +17,7 @@ class SocialLoginWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             'Social Login',
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+            style: TextStyle(fontFamily: 'NunitoSansSemibold', fontWeight: FontWeight.w500, fontSize: 18),
           ),
         ),
         Container(

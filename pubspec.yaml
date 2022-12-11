@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  #============|=================>
+  #=============================>
   # Core
   #=============================>
   freezed_annotation: ^2.1.0
@@ -55,4 +55,30 @@ flutter:
 
   assets:
     - assets/
-  #   - images/a_dot_ham.jpeg
+
+  fonts:
+    - family: CustomSocialIcons
+      fonts:
+        - asset: assets/fonts/CustomSocialIcons.ttf
+
+    - family: NunitoSans
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Regular.ttf
+    - family: NunitoSansBlack
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Black.ttf
+    - family: NunitoSansBold
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Bold.ttf
+    - family: NunitoSansItalic
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Italic.ttf
+    - family: NunitoSansLight
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Light.ttf
+    - family: NunitoSansSemibold
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Semibold.ttf
+    - family: NunitoSansExtrabold
+      fonts:
+        - asset: assets/nunito_sans/NunitoSans-Extrabold.ttf
